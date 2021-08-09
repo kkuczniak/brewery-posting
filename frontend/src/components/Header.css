@@ -1,0 +1,97 @@
+/* CSS HSL */
+:root {
+  --inchworm: hsla(90, 82%, 71%, 1);
+  --midnight-green-eagle-green: hsla(194, 85%, 21%, 1);
+  --cedar-chest: hsla(2, 67%, 57%, 1);
+  --cadet: hsla(198, 21%, 39%, 1);
+  --cadet-blue: hsla(182, 32%, 49%, 1);
+}
+
+header {
+  display: flex;
+  width: 90%;
+  height: 8vh;
+  margin: auto;
+  padding-top: 10px;
+  border-bottom: 1px solid var(--cadet-blue);
+}
+.logo-container,
+.nav-links {
+  display: flex;
+}
+.logo-container {
+  text-decoration: none;
+  flex: 1;
+}
+.logo-img {
+  height: 50px;
+}
+.logo {
+  color: var(--cedar-chest);
+  font-weight: 800;
+  margin: 10px 0 0 2px;
+}
+
+nav {
+  display: flex;
+  flex: 2;
+}
+.nav-links {
+  padding-top: 8px;
+  justify-content: space-around;
+  flex: 2;
+  list-style: none;
+}
+.nav-link {
+  color: var(--midnight-green-eagle-green);
+  font-size: 18px;
+  text-decoration: none;
+}
+.hamburger-toggle {
+  cursor: pointer;
+  height: 30px;
+  display: none;
+}
+.hamburger-toggle img {
+  height: 100%;
+}
+@media screen and (max-width: 740px) {
+  /* .logo {
+    padding-left: 40px;
+    font-size: 16px;
+    position: absolute;
+  } */
+}
+@media screen and (max-width: 687px) {
+  header {
+    overflow-x: hidden;
+  }
+  nav {
+    justify-content: end;
+    flex: 0;
+  }
+  .hamburger-toggle {
+    display: block;
+  }
+  .logo {
+    padding-left: 50px;
+    position: absolute;
+    font-weight: 600;
+    font-size: 16px;
+    z-index: 2;
+  }
+  .nav-links {
+    z-index: 100;
+    right: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    align-items: center;
+    width: 100%;
+    top: 8vh;
+    background-color: var(--inchworm);
+    transform: translateX(100%);
+  }
+}

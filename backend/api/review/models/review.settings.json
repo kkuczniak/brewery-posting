@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "review",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "beer_name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "brewery": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "rating": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 10
+    },
+    "beer_style": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
