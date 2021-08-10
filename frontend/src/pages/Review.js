@@ -1,4 +1,6 @@
 import { useQuery, gql } from '@apollo/client';
+import { Link } from 'react-router-dom';
+import './styles/Review.css';
 
 const REVIEWS = gql`
   query GetReview {
@@ -25,12 +27,13 @@ export default function HomePage() {
     <>
       {data.reviews.map((review) => (
         <div key={review.id} className='review-card'>
-          <div className='rating'>{review.rating}</div>
+          <div className='rating'>{review.rating}/10</div>
           <h2>{review.beer_name}</h2>
           <h3>{review.beer_style}</h3>
           <h3>{review.brewery}</h3>
 
           <p>{review.body.substring(0, 150)}...</p>
+          <Link to={`/RevDetails/${review.id}`}> Read more</Link>
         </div>
       ))}
     </>

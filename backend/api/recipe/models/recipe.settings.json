@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipes",
+  "info": {
+    "name": "recipe",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "malt": {
+      "type": "richtext",
+      "required": true
+    },
+    "hops": {
+      "type": "richtext",
+      "required": true
+    },
+    "yeast": {
+      "type": "richtext",
+      "required": true
+    },
+    "directions": {
+      "type": "richtext",
+      "required": true
+    },
+    "ibu": {
+      "type": "integer",
+      "max": 200,
+      "min": 0
+    },
+    "abv": {
+      "type": "decimal",
+      "max": 25,
+      "min": 0
+    },
+    "batchSize": {
+      "required": true,
+      "type": "decimal",
+      "max": 30,
+      "min": 5
+    },
+    "BLG": {
+      "type": "decimal",
+      "max": 50,
+      "min": 1,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "style": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

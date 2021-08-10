@@ -3,10 +3,13 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import Landing from './pages/Landing';
 import Review from './pages/Review';
+import ReviewDetails from './pages/details/ReviewDetails';
 import Guide from './pages/Guide';
-import Category from './pages/Category';
 import Recipes from './pages/Recipes';
 import Navbar from './components/Navbar';
+import big from './images/big-eclipse.svg';
+import mid from './images/mid-eclipse.svg';
+import small from './images/small-eclipse.svg';
 
 const client = new ApolloClient({
   uri: 'http://localhost:1337/graphql',
@@ -17,8 +20,8 @@ function App() {
   return (
     <Router>
       <ApolloProvider client={client}>
+        <Navbar />
         <div className='App'>
-          <Navbar />
           <Switch>
             <Route exact path='/'>
               <Landing />
@@ -26,8 +29,8 @@ function App() {
             <Route path='/review'>
               <Review />
             </Route>
-            <Route path='/category/:id'>
-              <Category />
+            <Route path='/RevDetails/:id'>
+              <ReviewDetails />
             </Route>
             <Route path='/guide'>
               <Guide />
@@ -37,6 +40,9 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <img className='big-circle' src={big} alt='' />
+        <img className='mid-circle' src={mid} alt='' />
+        <img className='small-circle' src={small} alt='' />
       </ApolloProvider>
     </Router>
   );

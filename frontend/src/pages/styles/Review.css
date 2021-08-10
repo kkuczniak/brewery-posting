@@ -1,0 +1,37 @@
+.review-card {
+  animation: drop 1.5s ease;
+  background: rgba(206, 206, 206, 0.466);
+  margin: 60px auto;
+  padding: 1px 20px 20px 90px;
+  position: relative;
+}
+.review-card .rating {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  background: hsla(2, 67%, 57%, 1);
+  font-size: 2em;
+  width: 90px;
+  height: 55px;
+  text-align: center;
+  color: white;
+}
+.review-card h2 {
+  margin-bottom: 0;
+}
+.review-card small {
+  margin-right: 10px;
+  color: #777;
+}
+.review-card a {
+  top: 8px;
+  position: relative;
+  width: 120px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  padding: 3px 3px;
+  background: hsla(2, 67%, 57%, 1);
+  border: 2px solid;
+}

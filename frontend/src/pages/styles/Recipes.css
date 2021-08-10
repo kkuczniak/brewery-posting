@@ -1,0 +1,43 @@
+.recipe-card {
+  animation: drop 1.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(8, 78, 99, 0.226);
+  border-radius: 15px;
+  margin: 60px auto;
+  padding: 1px 30px 20px 30px;
+  position: relative;
+}
+.recipe-card h3 {
+  color: hsla(2, 67%, 57%, 1);
+  text-shadow: 1px 1px black;
+  font-size: 1.8em;
+  margin-bottom: 4px;
+}
+.recipe-card h6 {
+  margin-bottom: 10px;
+}
+.parameters {
+  padding: 2px 1px 5px 8px;
+  background: rgba(8, 78, 99, 0.24);
+  border-radius: 15px;
+}
+.ingredients {
+  margin-top: 8px;
+  padding: 2px 1px 5px 8px;
+  background: rgba(8, 78, 99, 0.24);
+  border-radius: 15px;
+}
+.ingredients p {
+  font-weight: 500;
+}
+.ingredients ol {
+  padding-left: 22px;
+}
+.directions {
+  margin-top: 8px;
+  padding: 2px 1px 5px 8px;
+  background: rgba(8, 78, 99, 0.24);
+  border-radius: 15px;
+}

@@ -1,8 +1,5 @@
 import beer from '../images/beer.png';
-import big from '../images/big-eclipse.svg';
-import mid from '../images/mid-eclipse.svg';
-import small from '../images/small-eclipse.svg';
-import './Landing.css';
+import './styles/Landing.css';
 
 export default function Landing() {
   return (
@@ -21,9 +18,6 @@ export default function Landing() {
           <img src={beer} alt='craft' />
         </div>
       </section>
-      <img className='big-circle' src={big} alt='' />
-      <img className='mid-circle' src={mid} alt='' />
-      <img className='small-circle' src={small} alt='' />
     </div>
   );
 }

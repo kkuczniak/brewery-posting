@@ -30,15 +30,6 @@ export default function Navbar() {
             </Link>
           </li>
           <li className='nav-item'>
-            <Link
-              to='/category/:id'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Beer Styles
-            </Link>
-          </li>
-          <li className='nav-item'>
             <Link to='/guide' className='nav-links' onClick={closeMobileMenu}>
               Brewing Guide
             </Link>
